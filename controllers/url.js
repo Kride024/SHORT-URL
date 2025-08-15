@@ -10,7 +10,9 @@ await URL.create({
     redirectUrl:body.url,
     visitHistory:[],
 });
-return res.json({id:shortID});
+return res.render("home",{
+    id:shortID,
+});
 }//http://localhost:8001/url
 
 

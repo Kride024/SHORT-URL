@@ -1,2 +1,7 @@
 // with nodemon automatically my server gets started
 //we set name of database url but in terminal it always shows in urls , do +s
+
+// for template there various template engines are present like ejs, pug, handlebars etc
+
+//ejs files are actually html files with some extra features like we can use js code in it
+// we can use ejs to render html files and send it to client
