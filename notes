@@ -5,3 +5,28 @@
 
 //ejs files are actually html files with some extra features like we can use js code in it
 // we can use ejs to render html files and send it to client
+
+
+
+Authentication Patterns:
+//stateful(maintain state,data,server side) and stateless(which has no state)
+
+//stateful
+user ne car park ki usee guard ne  respective number/id diya and aapne diary mei bhi note down kaar liya , jab user aapni car return chahiye toh guard ko appna ticket dunga then guard match in his diary ,and return him car 
+
+
+
+client---(username/password)--->server
+      <-----(session uid)-------
+
+
+client ------(GET/users)| uid: 365--------->server  {Server checking who is user 367}
+       <-------(response:all users)---------
+
+///How to transfer uid?
+cookies,response,headers from server to client.
+
+
+but in server side rendering like we are doing with ejs , there cookies consider best among all.
+
+but In rest api headers(mobile app) there token given under header very easily are preferred
