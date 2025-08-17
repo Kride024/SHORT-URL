@@ -30,3 +30,6 @@ cookies,response,headers from server to client.
 but in server side rendering like we are doing with ejs , there cookies consider best among all.
 
 but In rest api headers(mobile app) there token given under header very easily are preferred
+
+//express flow
+client -> Auth Middleware(Checks for cookie value or uid, if valid calls next()else reject the request) ->endpoint route

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            font-family: "Segoe UI" , Tahoma ,Geneva,Verdana, sans-serif;
+        }h1{
+            text-align: center;
+            /* margin-top:20px; */
+        }
+        form{
+            width:300px;
+            margin:2px auto;
+            padding:20px;
+            
+        }
+            label {
+        margin-bottom: 10px;
+    }
+    input[type="text"] {
+        
+        margin-bottom: 10px;
+    }
+    button {
+        width:100px;
+        align-items: center;
+        margin-top: 10px;
+    }
+        
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Signup</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+     <h1>Sign Up</h1>
+     <form action="/user" method="POST">
+        <label>Full Name</label>
+        <input type="text" required name="name" /><br>
+        <label>Email</label>
+        <input type="text" required name="email" /><br>
+        <label>Password</label>
+        <input type="text" required name="password"/>
+
+        <button type="submit">Signup</button>
+     </form>
+    </body>
+</html>
