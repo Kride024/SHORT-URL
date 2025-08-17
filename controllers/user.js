@@ -22,20 +22,16 @@ async function handleUserSignup(req,res){
 
 async function handleUserLogin(req,res){
     const {email,password} = req.body;
-    if(!email ||!password){
-        return res.status(400).json({error:"All fields are required"});
-    }
     const user = await User.findOne({email,password});
-    if(!user){
-        return res.render("login",{
-            error:"Invalid email or Password"
-        })
-    }
-
+    if(!user)
+        return res.render('login',{
+            error:"Invalid email or Password",
+        });
+    
     const sessionId = uuidv4();
     setUser(sessionId,user);
     res.cookie("uid", sessionId);
-    
+
     return res.redirect("/");
 }
 module.exports= {

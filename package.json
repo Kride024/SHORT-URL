@@ -9,6 +9,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cookies-parser": "^1.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongoose": "^8.17.1",

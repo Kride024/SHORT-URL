@@ -9,6 +9,7 @@ await URL.create({
     shortId:shortID,
     redirectUrl:body.url,
     visitHistory:[],
+    createdBy:req.user._id, // Assuming req.user is set by the auth middleware
 });
 return res.render("home",{
     id:shortID,

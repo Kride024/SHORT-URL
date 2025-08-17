@@ -1,6 +1,7 @@
 const sessionIdToUserMap = new Map();
 
-function setUser(id, user){
+function setUser(id, user){ 
+// console.log("Storing session:", sessionId, "for user:", user.email);
 sessionIdToUserMap.set(id,user);
 }
 
