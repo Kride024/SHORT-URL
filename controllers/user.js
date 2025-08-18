@@ -28,13 +28,19 @@ async function handleUserLogin(req,res){
             error:"Invalid email or Password",
         });
     
-    const sessionId = uuidv4();
-    setUser(sessionId,user);
-    res.cookie("uid", sessionId);
+   // ⚡ only store minimal safe data in token
+    const token = setUser({ id: user._id.toString(), email: user.email });
+
+    // set httpOnly cookie
+    res.cookie("uid", token, {
+        httpOnly: true,
+        secure: false, // set true if using https
+        sameSite: "strict"
+    });
 
     return res.redirect("/");
 }
 module.exports= {
     handleUserSignup,
     handleUserLogin,
-};
+};  
