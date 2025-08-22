@@ -29,16 +29,14 @@ async function handleUserLogin(req,res){
         });
     
    // ⚡ only store minimal safe data in token
-    const token = setUser({ id: user._id.toString(), email: user.email });
-
-    // set httpOnly cookie
-    res.cookie("uid", token, {
-        // httpOnly: true,
-        // secure: false, // set true if using https
-        // sameSite: "strict" // JSON Web Token
-        
+  // ⚡ include role in payload
+    const token = setUser({ 
+        _id: user._id.toString(), 
+        email: user.email,
+        role: user.role 
     });
-
+    // const token = setUser(user);
+    res.cookie("token",token);
     return res.redirect("/");
 }
 module.exports= {

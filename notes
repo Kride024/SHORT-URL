@@ -42,3 +42,15 @@ client -> Auth Middleware(Checks for cookie value or uid, if valid calls next()e
 :expire date
 if domain: '.piyushgarg.dev' mean // both www.piyushgarg.com as well blog.piyushgarg.com can access this.
 
+// cookies limited to browser
+so we use in phone 
+1. Authorization: Bearer <token>
+in chrome , token store in local storage and in mobile (internal storage) when ever there token needed, call through authorization. (in company this is how things work)
+
+
+// Authentication mean login karna but 
+
+// Autherisation is admin and user panel
+
+
+
