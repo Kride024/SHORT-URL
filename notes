@@ -40,4 +40,5 @@ client -> Auth Middleware(Checks for cookie value or uid, if valid calls next()e
 // In cookies you can specify 
 :Domain name
 :expire date
+if domain: '.piyushgarg.dev' mean // both www.piyushgarg.com as well blog.piyushgarg.com can access this.
 
