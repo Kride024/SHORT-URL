@@ -33,9 +33,10 @@ async function handleUserLogin(req,res){
 
     // set httpOnly cookie
     res.cookie("uid", token, {
-        httpOnly: true,
-        secure: false, // set true if using https
-        sameSite: "strict"
+        // httpOnly: true,
+        // secure: false, // set true if using https
+        // sameSite: "strict" // JSON Web Token
+        
     });
 
     return res.redirect("/");

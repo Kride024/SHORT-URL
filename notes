@@ -33,3 +33,11 @@ but In rest api headers(mobile app) there token given under header very easily a
 
 //express flow
 client -> Auth Middleware(Checks for cookie value or uid, if valid calls next()else reject the request) ->endpoint route
+
+//cookies are domain specific , example someone go to fb.com there two cookies made then go to other x.com if those cookies also forwarded to that website then that website will get access to your fb.com account
+
+
+// In cookies you can specify 
+:Domain name
+:expire date
+
